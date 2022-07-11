@@ -10,4 +10,5 @@ resource "azurerm_subnet" "vsub" {
   resource_group_name  = var.rg
   virtual_network_name = var.vnet
   address_prefixes     = [var.ip_address]
+  depends_on = [azurerm_virtual_network.vnet] 
 }
